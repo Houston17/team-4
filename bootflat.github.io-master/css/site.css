@@ -371,7 +371,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	
 	border-color: #2d2d2d;
     margin-bottom: 21px;
-        background-color: #e6e6e6;
+        background-color: #f3f3f3;
     border: 1px solid rgba(45, 45, 45, 0.11);
     border-radius: 4px;
     -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
@@ -920,5 +920,11 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);  
 }
 .topic h3, .topic h5 {
-	color:#000000;
+	color:rgb(70, 70, 70);
+}
+.info{
+	width:74%;
+}
+.profileimage img{
+	border: 1px solid rgba(0, 0, 0, 0.5);
 }
