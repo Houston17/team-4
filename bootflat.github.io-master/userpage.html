@@ -3,16 +3,17 @@
 
 <head>
     <meta charset="utf-8">
-    <title>User Page</title>
+    <title>User Page for Emma</title>
     <!-- Sets initial viewport load and disables zooming  -->
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
 
-    <link rel="shortcut icon" href="img/reallogo.png" />
-    <link rel="bookmark" href="" />
+    <link rel="shortcut icon" href="favicon_16.ico" />
+    <link rel="bookmark" href="favicon_16.ico" />
     <!-- site css -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="bootflat/css/bootflat.min.css">
-    <link rel="stylesheet" href="css/userstyle.css">
+    <link rel="stylesheet" href="css/site.css">
+	<script src="https://use.fontawesome.com/03bf489f73.js"></script>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700,400italic,600italic,700italic,800italic,300italic" rel="stylesheet" type="text/css">
     <!-- <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'> -->
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
@@ -32,7 +33,22 @@
 
     <script type="text/javascript" src="js/site.min.js"></script>
 </head>
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    	  <div class="modal-dialog">
+				<div class="loginmodal-container">
+					<h1>Login to Your Account</h1><br>
+				  <form>
+					<input type="text" name="user" placeholder="Username">
+					<input type="password" name="pass" placeholder="Password">
+					<input type="submit" name="login" class="login loginmodal-submit" value="Login">
+				  </form>
 
+				  <div class="login-help">
+					<a href="#">Register</a> - <a href="#">Forgot Password</a>
+				  </div>
+				</div>
+			</div>
+		  </div>
 <body style="background-color: #f1f2f6;">
     <div class="docs-header">
         <!--nav-->
@@ -45,175 +61,91 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href=""><img src="img/reallogo.png" height="100"></a>
+                    <a class="navbar-brand" href="index.html"><img src="img/reallogo.png" height="100"></a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a class="nav-link current" href="">Home</a></li>
-                        <li><a class="nav-link" href="#" data-toggle="modal" data-target="#login-modal">Log In</a></li>
-
-                        <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-                            	  <div class="modal-dialog">
-                        				<div class="loginmodal-container">
-                        					<h1>Login to Your Account</h1><br>
-                        				  <form>
-                        					<input type="text" name="user" placeholder="Username">
-                        					<input type="password" name="pass" placeholder="Password">
-                        					<input type="submit" name="login" class="login loginmodal-submit" value="Login">
-                        				  </form>
-
-                        				  <div class="login-help">
-                        					<a href="#">Register</a> - <a href="#">Forgot Password</a>
-                        				  </div>
-                        				</div>
-                        			</div>
-                        		  </div>
+                        <li><a class="nav-link current" href="index.html">Home</a></li>
+						<li><a class="nav-link" href="#" data-toggle="modal" data-target="#login-modal">Log In</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <!--header-->
-        <div class="slideshow-container">
-  <div class="mySlides fade">
-    <div class="numbertext">1 / 3</div>
-    <img src="img/homeless.jpg" style="width:100%">
-    <div class="text">In the last few years, millions have lost their homes</div>
-  </div>
-
-  <div class="mySlides fade">
-    <div class="numbertext">2 / 3</div>
-    <img src="img/maxresdefault.jpg" style="width:100%">
-    <div class="text">Thousands of veterans do not have roofs over their heads</div>
-  </div>
-
-  <div class="mySlides fade">
-    <div class="numbertext">3 / 3</div>
-    <img src="img/homeless1.jpg" style="width:100%">
-    <div class="text">Cities are increasingly making homelessness a crime</div>
-  </div>
-
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-</div>
-<br>
-
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-</div>
         <div class="topic">
             <div class="container">
                 <div class="col-md-12">
                     <div class="col-sm-3">
-                        <div class="profileimage" style="margin-left:-20px;margin-top:10px;">
-
-                          <img src="img/homeless.jpg"></img>
-
+                        <div class="profileimage" style="margin-left:-20px;margin-top:15px;"><img src="img/volunteer1.jpg"></img>
                         </div>
-
-
                     </div>
                     <div class="col-sm-8">
-                        <h3 style="">Joe</h3>
+                        <h3 style="">Emma</h3>
                         <h5 style="margin-bottom:20px;">Volunteer</h5>
-                        <h6 style="line-height:22px;color:#292929;font-size:14px;">
+                        <h6 style="line-height:22px;color:#292929;font-size:14px;">Educator and mother dedicated to supporting her community. Emma believes that each member of a community brings a unique talent to improving and transforming a community. </h6>
+						<h6 style="line-height:22px;color:#292929;font-size:14px;">As a Volunteer Coordinator, Emma is one of the original members of Search who continues to amaze all in her dedication to serve, impact and transform.</h6>
+						<h6 style="line-height:22px;color:#292929;font-size:14px;"> She primary works with helping schedule events and coordinating with corresponding clients and other volunteers to make sure needs and goals are being met.</h6>
+
+                        
+
+				   </div>
+                </div>
+                <div class="col-md-4">
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
 
 
-                          Joe is a volunteer who has helped numerous people through his contributions during
-                          charitable events.
+    <div class="container">
+	<div class="col-sm-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Recently Helped</h3>
+            </div>
+            <div class="panel-body">
+				<div class="panel-body">
+              <div class="col-sm-3">
+                <div class="profileimage" style="margin-left:-20px;margin-top:15px;"><img style="height:200px;" src="https://i.imgur.com/VKa54Wk.png">
+                </div>
+              </div>
+              <div class="col-sm-8">
+                <h3 style="margin-top:10px;"><a href="http://54.234.253.32:3000/clients/1">Wendell</a></h3>
+                <h6 style="line-height:22px;color:#292929;font-size:14px;">
+                  Wendell found himself homeless in the streets of Houston for 25 years. After serving in the armed forces for nine years, Wendell worked as a docker. However, after the breakdown of his marriage, Wendell's life took a downward turn and he no longer could pay his bills...
+                  <a href="http://54.234.253.32:3000/clients/1">Learn More</a>
+                </h6>
+              </div>
+         </div>
 
+        </div>
+	</div>
+	
+	
 
+    </div>
+	
+	<div class="col-sm-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Events Done</h3>
+            </div>
+            <div class="panel-body">
 
-                        </h6>
+			 <h4 style="margin-top:10px;">2017 Run to End Homelessness</h4>
+			 <h4 style="margin-top:10px;">October Meal Packing</h4>
+			 <h4 style="margin-top:10px;">Christmas 2016 Gift Exchange</h4>
+                <h6 style="line-height:22px;color:#292929;font-size:14px;">
+                  
+                </h6>
 
-                        <h6 style="text-align:left;font-weight:700;line-height:22px;color:#292929;font-size:14px;"> Share this page: </h6>
-						<!-- AddToAny BEGIN -->
-<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
-<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
-<a class="a2a_button_facebook"></a>
-<a class="a2a_button_twitter"></a>
-<a class="a2a_button_google_plus"></a>
-</div>
-<script async src="https://static.addtoany.com/menu/page.js"></script>
+        </div>
+	</div>
+	</div>
+	</div>
+</body>
 
-	  <!--TimeLine
-      ================================================== -->
-      <div class="timeline">
-          <dl>
-              <dt>Most Served Clients</dt>
-              <dd class="pos-right clearfix">
-                  <div class="circ"> <i class="fa fa-handshake-o" aria-hidden="true"></i></div>
-                  <div class="time">1</div>
-                  <div class="events">
-                      <div class="pull-left">
-                          <img class="events-object img-rounded" src="img/photo-1.jpg">
-                      </div>
-                      <div class="events-body">
-                          <h4 class="events-heading">First Met With Search</h4>
-                          <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.</p>
-                      </div>
-                  </div>
-              </dd>
-              <dd class="pos-left clearfix">
-                  <div class="circ"></div>
-                  <div class="time">2</div>
-                  <div class="events">
-                      <div class="pull-left">
-                          <img class="events-object img-rounded" src="img/photo-2.jpg">
-                      </div>
-                      <div class="events-body">
-                          <h4 class="events-heading">Bootflat</h4>
-                          <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.</p>
-                      </div>
-                  </div>
-              </dd>
-              <dt></dt>
-              <dd class="pos-right clearfix">
-                  <div class="circ"></div>
-                  <div class="time">3</div>
-                  <div class="events">
-                      <div class="pull-left">
-                          <img class="events-object img-rounded" src="img/photo-3.jpg">
-                      </div>
-                      <div class="events-body">
-                          <h4 class="events-heading">Flat UI</h4>
-                          <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.</p>
-                      </div>
-                  </div>
-              </dd>
-              <dd class="pos-left clearfix">
-                  <div class="circ"></div>
-                  <div class="time">4</div>
-                  <div class="events">
-                      <div class="pull-left">
-                          <img class="events-object img-rounded" src="img/photo-4.jpg">
-                      </div>
-                      <div class="events-body">
-                          <h4 class="events-heading">UI design</h4>
-                          <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.</p>
-                      </div>
-                  </div>
-              </dd>
-
-          </dl>
-      </div>
-      <script>
-      var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}
-    slides[slideIndex-1].style.display = "block";
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
-</script>
-    </script>
-  </body>
 </html>
