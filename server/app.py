@@ -23,11 +23,17 @@ def hello():
     return "Hello World2!"
 
 <<<<<<< HEAD
+
+firebase.auth().createUserWithEmailAndPassword(email, password)
+firebase.auth().signInWithEmailAndPassword(email, password)
+firebase.auth().signOut().then(function())
+
+#-------------------------------------------------------------------------------
 #trying with flask************************************************
 from flask import Flask, render_template, redirect, url_for, request
 
 # route for handling the login page logic
-@app.route('/login', methods=['GET', 'POST'])
+@app.route('/login/<username>', methods=['POST'])
 def login():
     error = None
     if request.method == 'POST':
