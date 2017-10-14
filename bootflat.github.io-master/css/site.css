@@ -255,7 +255,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .docs-header {
     padding-top: 50px;
     border-top: 1px solid #50c1e9;
-    background-color:#2c3e50;
+    /*background-color:#2c3e50;*/
 }
 .docs-header.header--noBackground {
     background: none;
@@ -338,18 +338,24 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
  * ---------------------------------- */
 .topic {
     position: relative;
-    padding: 40px 0 110px;
+    padding: 40px 0 70px;
 }
 .topic h3 {
     margin-top: 20px;
     color: #fff;
-    font-size: 28px;
+    font-size: 36px;
     font-weight: normal;
 }
 .topic h4 {
     margin-top: 15px;
     color: rgba(255, 255, 255, .8);
     font-weight: normal;
+}
+.topic h5 {
+    margin-top: 15px;
+    color: rgba(255, 255, 255, .8);
+    font-weight: normal;
+	font-size:22px;
 }
 .topic .topic__infos {
     position: absolute;
@@ -362,6 +368,14 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .topic .container {
     position: relative;
     color: rgba(255, 255, 255, .8);
+	
+	border-color: #2d2d2d;
+    margin-bottom: 21px;
+        background-color: #e6e6e6;
+    border: 1px solid rgba(45, 45, 45, 0.11);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.05);
 }
 .topic .container a {
     color: #fff;
@@ -374,6 +388,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .topic .container a.btn {
     padding: 10px 16px;
     text-decoration: none;
+	
+	
 }
 .topic .github {
     position: relative;
@@ -879,4 +895,33 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 .center{
 	text-align:center;
+}
+.navbar-brand>img {
+    display: block;
+    width: 125px;
+    height: auto;
+}
+.navbar-custom .nav li a {
+    display: block;
+    color: #434A54;
+}
+.circle {
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin: 1em auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-border-radius: 99em;
+  -moz-border-radius: 99em;
+  border-radius: 99em;
+  border: 5px solid #eee;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);  
+}
+.topic h3, .topic h5 {
+	color:rgb(70, 70, 70);
+}
+.info{
+	width:74%;
 }
