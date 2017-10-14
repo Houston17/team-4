@@ -2,7 +2,7 @@ class ClientsController < ApplicationController
   before_action :set_client, only: [:show, :edit, :update, :destroy]
 
   def index
-    @featured_clients = Client.where(featured: 1).limit(3)
+    @featured_clients = Client.where(private: false, featured: true).limit(3)
   end
 
   # GET /clients
@@ -69,11 +69,11 @@ class ClientsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_client
-      @client = Client.find(params[:id])
+      @client = Client.where(id: params[:id], private: false).first
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def client_params
-      params.require(:client).permit(:name, :bio, :intro, :embed_html, :featured)
+      params.require(:client).permit(:name, :bio, :intro, :embed_html, :featured, :private, :picture_url)
     end
 end
