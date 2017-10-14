@@ -93,3 +93,31 @@ data = {
 db.child("users").child("Morty").set(data)
 # Pass the user's idToken to the push method
 results = db.child("users").push(data, user['idToken'])
+
+
+#attempt 3
+user = raw_input('Create Username: ')
+password = raw_input('Create Password: ')
+
+if user in store_user:
+    print "That user already exists"
+else:
+    store=dict()
+    store[user]=password
+
+while True:
+    userguess=""
+    passwordguess=""
+    key=""
+    while not (userguess in store and store[userguess] == passwordguess):
+        print "Try again"
+    while (userguess != user) or (passwordguess != password):
+        userguess = raw_input('Username: ')
+        passwordguess = raw_input('Password:')
+
+
+    print store.user
+    print store[user]
+
+    while key != "lock":
+        key = raw_input("")
