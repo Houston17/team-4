@@ -338,7 +338,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
  * ---------------------------------- */
 .topic {
     position: relative;
-    padding: 40px 0 70px;
+    padding: 40px 0 30px;
 }
 .topic h3 {
     margin-top: 20px;
@@ -371,7 +371,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	
 	border-color: #2d2d2d;
     margin-bottom: 21px;
-        background-color: #f3f3f3;
+       
+    background-color: #ffffff;
     border: 1px solid rgba(45, 45, 45, 0.11);
     border-radius: 4px;
     -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
@@ -927,4 +928,16 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 .profileimage img{
 	border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.panel{
+	background-color: rgba(255, 255, 255, 0);
+}
+.panel-body {
+    padding: 15px;
+    background-color: white;
+}
+.panel-title{
+	
+	font-size:30px;
+	
 }
