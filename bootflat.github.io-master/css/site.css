@@ -1088,9 +1088,11 @@ p {
 	color:white;
 	font-size:45px;
 	margin-bottom:5px;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 .carousel-caption p{
 	font-size:20px;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 .carousel-caption a{
 	color: #dceaef;
@@ -1100,5 +1102,15 @@ p {
 	color: #3bafda;
 }
 
+.carousel-caption h3 {
 
+    margin-top: -8px;
+}
+@media screen and (min-width: 768px){
+.carousel-caption {
 
+    border-radius: 35px;
+
+    background-color: rgba(0, 0, 0, 0.47);
+}
+}
