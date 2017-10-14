@@ -994,5 +994,28 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	font-size: 40px !important;
     margin-top: 11px;
     margin-left: 6px;
+	color:white;
 	
+}
+.fa-home {
+    font-size: 45px !important;
+    margin-top: 7px;
+    margin-left: 11px;
+}
+.p{
+	    font-size: 15px;
+}
+.timeline dl dd .events .events-body .events-heading {
+    margin: 0 0 10px;
+    font-size: 17px;
+}
+.fa-check {
+    font-size: 40px !important;
+    margin-top: 12px;
+    margin-left: 12px;
+}
+.fa-users {
+    font-size: 40px !important;
+    margin-top: 11px;
+    margin-left: 10px;
 }
