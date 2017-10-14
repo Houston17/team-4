@@ -22,7 +22,7 @@ def hello():
     db.child("test").push(data)
     return "Hello World2!"
 
-
+#trying with flask
 from flask import Flask, render_template, redirect, url_for, request
 
 # route for handling the login page logic
@@ -36,6 +36,8 @@ def login():
             return redirect(url_for('home'))
     return render_template('login.html', error=error)
 
+#trying with firebase
+
 from firebase import firebase
 firebase = firebase.FirebaseApplication('https://code-for-good-2017.firebaseio.com', None)
 result = firebase.get('/users', None)
@@ -45,7 +47,7 @@ print result
 auth = firebase.auth()
 
 # Log the user in
-#user = auth.sign_in_with_email_and_password(email, password)
+user = auth.sign_in_with_email_and_password(email, password)
 
 #if !email:
 #    auth.create_user_with_email_and_password(email, password)
