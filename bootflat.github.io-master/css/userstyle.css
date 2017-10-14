@@ -933,12 +933,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   padding-bottom: 50px;
 }
 
-.c {
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: left;
-  height: 40px;
-  width: 25px;
+.timeline dl dd .events {
+    background-color: rgb(243, 248, 255);
+    border-radius: 8px;
+
 }
 
 
