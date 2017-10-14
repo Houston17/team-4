@@ -25,6 +25,9 @@ def hello():
 # Get a reference to the auth service
 auth = firebase.auth()
 
+email = raw_input("Enter email:")
+password = raw_input("Enter password:")
+
 # Log the user in
 user = auth.sign_in_with_email_and_password(email, password)
 
