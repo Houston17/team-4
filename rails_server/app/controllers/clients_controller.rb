@@ -18,7 +18,7 @@ class ClientsController < ApplicationController
     @client = Client.where(id: params[:id], private: false).first
 
     # Order the client's timeline events by date and group by month/year combo
-    @events = @client.events.order(:date).group_by { |e| e.date.beginning_of_month }
+    @events =  @client.events.order(:date).group_by { |e| e.date.beginning_of_month }
   end
 
   # GET /clients/new
