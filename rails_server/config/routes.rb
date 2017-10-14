@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'volunteer/bob'
+
+  get 'volunteer/emma'
+
+  get 'volunteer/mike'
+
   devise_for :users
   get 'clients/edit_list', to: 'clients#edit_list'
   resources :clients
