@@ -385,6 +385,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     text-decoration: underline;
     padding: 0;
     font-weight: normal;
+	    margin-right: 15px;
 }
 .topic .container a.btn {
     padding: 10px 16px;
@@ -929,6 +930,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .profileimage img{
 	border: 1px solid rgba(0, 0, 0, 0.5);
 }
+.profileimage{
+	margin-bottom:15px;
+}
 .panel{
 	background-color: rgba(255, 255, 255, 0);
 }
@@ -940,4 +944,48 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	
 	font-size:30px;
 	
+}
+.a2a_dd{
+	
+	display:none !important;
+	
+}
+
+.timeline dl dt{
+	
+	font-size: 18px;
+	
+}
+.time{
+	
+	font-size: 18px;
+	
+}
+
+.timeline dl dd .events {
+    background-color: rgb(243, 248, 255);
+    border-radius: 8px;
+}
+
+.timeline dl dd .circ {
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    z-index: 200;
+    width: 70px;
+    height: 70px;
+    margin-left: -35px;
+    background-color: #4fc1e9;
+    border: 4px solid #f5f7fa;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+}
+.timeline dl dd.pos-right .time {
+    margin-left: -126px;
+    text-align: right;
+}
+.timeline dl dd.pos-left .time {
+    margin-left: 22px;
+    text-align: left;
 }
