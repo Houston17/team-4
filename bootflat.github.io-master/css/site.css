@@ -989,3 +989,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     margin-left: 22px;
     text-align: left;
 }
+.fa{
+	
+	font-size: 40px !important;
+    margin-top: 11px;
+    margin-left: 6px;
+	
+}
