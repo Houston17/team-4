@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>User Page</title>
     <!-- Sets initial viewport load and disables zooming  -->
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-    <!-- SmartAddon.com Verification -->
 
-    <link rel="shortcut icon" href="favicon_16.ico"/>
-    <link rel="bookmark" href="favicon_16.ico"/>
+    <link rel="shortcut icon" href="img/reallogo.png" />
+    <link rel="bookmark" href="" />
     <!-- site css -->
-    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootflat/css/bootflat.min.css">
+    <link rel="stylesheet" href="css/userstyle.css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700,400italic,600italic,700italic,800italic,300italic" rel="stylesheet" type="text/css">
     <!-- <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'> -->
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
@@ -18,120 +20,89 @@
       <script src="js/html5shiv.js"></script>
       <script src="js/respond.min.js"></script>
     <![endif]-->
+
+	<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "https://connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
     <script type="text/javascript" src="js/site.min.js"></script>
-  </head>
-  <body style="background-color: #f1f2f6;">
+</head>
+
+<body style="background-color: #f1f2f6;">
     <div class="docs-header">
-      <!--nav-->
-      <nav class="navbar navbar-default navbar-custom" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="index.html"><img src="img/logo.png" height="40"></a>
-          </div>
-          <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar-right">
-              <li><a class="nav-link" href="">Home</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <!--header-->
-      <div class="topic">
-        <div class="container">
-			<div class="col-md-8">
-			  <h3>Joe</h3>
-			  <h4>Volunteer</h4>
-			</div>
-			<div class="col-md-4">
-			  <div class="advertisement">
-<script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=bootflat" id="_carbonads_js"></script>
+        <!--nav-->
+        <nav class="navbar navbar-default navbar-custom" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href=""><img src="img/reallogo.png" height="100"></a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="nav-link current" href="">Home</a></li>
 
-			  </div>
-          </div>
-        </div>
-        <div class="topic__infos">
-          <div class="container">
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--header-->
+        <div class="topic">
+            <div class="container">
+                <div class="col-md-12">
+                    <div class="col-sm-3">
+                        <div class="profileimage" style="margin-left:-20px;margin-top:10px;">
 
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--documents-->
-    <div class="container documents">
+                          <img src="img/thumbnail-3.jpg"></img>
+
+                        </div>
+                        
+                        <div class="c">
+
+                        <img class="c1" src="img/slider1.jpg", height=80px, width=60px>
+                      </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <h3 style="">Joe</h3>
+                        <h5 style="margin-bottom:20px;">Volunteer</h5>
+                        <h6 style="line-height:22px;color:#292929;font-size:14px;">
+
+
+                          Joe is a volunteer who has helped numerous people through his contributions during
+                          charitable events.
+
+
+
+                        </h6>
+
+                        <h6 style="text-align:left;font-weight:700;line-height:22px;color:#292929;font-size:14px;"> Share this page: </h6>
+						<!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_google_plus"></a>
+</div>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
 
 	  <!--TimeLine
       ================================================== -->
-      <div class="example">
-		<h2 class="example-title">TimeLine</h2>
-        <div class="row">
-		  <div class="col-md-12">
-			  <div class="timeline">
-				  <dl>
-					  <dt>Apr 2014</dt>
-					  <dd class="pos-right clearfix">
-						  <div class="circ"></div>
-						  <div class="time">Apr 14</div>
-						  <div class="events">
-							  <div class="pull-left">
-								  <img class="events-object img-rounded" src="img/photo-1.jpg">
-							  </div>
-							  <div class="events-body">
-								  </div>
-						  </div>
-					  </dd>
-					  <dd class="pos-left clearfix">
-						  <div class="circ"></div>
-						  <div class="time">Apr 10</div>
-						  <div class="events">
-							  <div class="pull-left">
-								  <img class="events-object img-rounded" src="img/photo-2.jpg">
-							  </div>
-							  <div class="events-body">
-								  <h4 class="events-heading"></h4>
+      <hr></hr>
 
-							  </div>
-						  </div>
-					  </dd>
-					  <dt>Mar 2014</dt>
-					  <dd class="pos-right clearfix">
-						  <div class="circ"></div>
-						  <div class="time">Mar 15</div>
-						  <div class="events">
-							  <div class="pull-left">
-								  <img class="events-object img-rounded" src="img/photo-3.jpg">
-							  </div>
-							  <div class="events-body">
-								  <h4 class="events-heading">Flat UI</h4>
+      //picture of client helped
+      <div class="t">
 
-							  </div>
-						  </div>
-					  </dd>
-					  <dd class="pos-left clearfix">
-						  <div class="circ"></div>
-						  <div class="time">Mar 8</div>
-						  <div class="events">
-							  <div class="pull-left">
-								  <img class="events-object img-rounded" src="img/photo-4.jpg">
-							  </div>
-							  <div class="events-body">
-								  <h4 class="events-heading">UI design</h4>
 
-							  </div>
-						  </div>
-					  </dd>
-
-				  </dl>
-			  </div>
-		  </div>
-		</div>
       </div>
-
 
 
     </script>

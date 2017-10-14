@@ -21,3 +21,37 @@ def hello():
     data = { "hello": "world" }
     db.child("test").push(data)
     return "Hello World2!"
+
+# Get a reference to the auth service
+auth = firebase.auth()
+
+email = raw_input("Enter email:")
+password = raw_input("Enter password:")
+
+# Log the user in
+user = auth.sign_in_with_email_and_password(email, password)
+
+if !email:
+    auth.create_user_with_email_and_password(email, password)
+    auth.send_email_verification(user['idToken'])
+elif !password:
+    auth.send_password_reset_email("email")
+else:
+    auth.get_account_info(user['idToken'])
+
+
+# before the 1 hour expiry:
+user = auth.refresh(user['refreshToken'])
+# now we have a fresh token
+user['idToken']
+
+# Get a reference to the database service
+db = firebase.database()
+
+# data to save
+data = {
+    "name": "Mortimer 'Morty' Smith"
+}
+db.child("users").child("Morty").set(data)
+# Pass the user's idToken to the push method
+results = db.child("users").push(data, user['idToken'])
