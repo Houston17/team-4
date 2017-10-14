@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'users/new'
+
   devise_for :users
   get 'clients/edit_list', to: 'clients#edit_list'
   resources :clients
