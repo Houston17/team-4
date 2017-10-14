@@ -28,13 +28,18 @@ auth = firebase.auth()
 email = raw_input("Enter email:")
 password = raw_input("Enter password:")
 
-auth.create_user_with_email_and_password(email, password)
-auth.send_email_verification(user['idToken'])
-auth.send_password_reset_email("email")
-auth.get_account_info(user['idToken'])
-
 # Log the user in
 user = auth.sign_in_with_email_and_password(email, password)
+
+if !email:
+    auth.create_user_with_email_and_password(email, password)
+    auth.send_email_verification(user['idToken'])
+elif !password:
+    auth.send_password_reset_email("email")
+else:
+    auth.get_account_info(user['idToken'])
+
+
 # before the 1 hour expiry:
 user = auth.refresh(user['refreshToken'])
 # now we have a fresh token
