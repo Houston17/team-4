@@ -1,3 +1,7 @@
+<% if user_signed_in? %>
+  <%= link_to 'Edit', edit_client_path(@client), class: 'btn btn-secondary' %>
+<% end %>
+
 <div class="topic">
   <div class="container">
       <div class="col-md-12">
