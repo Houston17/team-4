@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template, request
 
 import pyrebase
 
@@ -22,6 +22,7 @@ def hello():
     db.child("test").push(data)
     return "Hello World2!"
 
+<<<<<<< HEAD
 #trying with flask************************************************
 from flask import Flask, render_template, redirect, url_for, request
 
@@ -121,3 +122,23 @@ while True:
 
     while key != "lock":
         key = raw_input("")
+=======
+db = firebase.database()
+@app.route('/other',methods = ['POST', 'GET'])
+def other():
+    if request.methods == 'GET':
+        getinfo()
+
+def getinfo(name):
+    clients = db.child("test");
+    for key in clients:
+        if key.get("name") == name:
+            events = key.get("events")
+            for temp in events:
+                pictures = temp.get("pictures")
+                des = temp.get("description")
+                #send these pictures & description back
+
+
+app.run()
+>>>>>>> a053c498e06b347b8266588c9c28f5a7e17f2b11
