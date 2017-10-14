@@ -994,5 +994,70 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	font-size: 40px !important;
     margin-top: 11px;
     margin-left: 6px;
+	color:white;
+	
+}
+.fa-home {
+    font-size: 45px !important;
+    margin-top: 7px;
+    margin-left: 11px;
+}
+.p{
+	    font-size: 15px;
+}
+.timeline dl dd .events .events-body .events-heading {
+    margin: 0 0 10px;
+    font-size: 17px;
+}
+.fa-check {
+    font-size: 40px !important;
+    margin-top: 12px;
+    margin-left: 12px;
+}
+.fa-users {
+    font-size: 40px !important;
+    margin-top: 11px;
+    margin-left: 10px;
+}
+p {
+    line-height: 25px;
+}
+
+.circ, .events, dt
+{
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1);
+	
+}
+
+.circ:hover, dt:hover
+{
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.35);
+    z-index: 9999999;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.1);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.1);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.1);
+    transition: all 200ms ease-in;
+    transform: scale(1.1);
+	
+	
+}
+.events:hover
+{
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.35);
+    z-index: 9999999;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.05);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.05);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.05);
+    transition: all 200ms ease-in;
+    transform: scale(1.05);
+	
 	
 }
