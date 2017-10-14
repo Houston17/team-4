@@ -1,5 +1,5 @@
 class ClientsController < ApplicationController
-  before_action :set_client, only: [:show, :edit, :update, :destroy]
+  before_action :set_client, only: [:edit, :update, :destroy]
 
   def index
     @featured_clients = Client.where(private: false, featured: true).limit(3)
@@ -14,6 +14,7 @@ class ClientsController < ApplicationController
   # GET /clients/1
   # GET /clients/1.json
   def show
+    @client = Client.where(id: params[:id], private: false).first
     @events = @client.events.group_by { |e| e.date.beginning_of_month }
   end
 
@@ -47,7 +48,7 @@ class ClientsController < ApplicationController
   def update
     respond_to do |format|
       if @client.update(client_params)
-        format.html { redirect_to @client, notice: 'Client was successfully updated.' }
+        format.html { redirect_to clients_edit_list_url, notice: 'Client was successfully updated.' }
         format.json { render :show, status: :ok, location: @client }
       else
         format.html { render :edit }
@@ -69,7 +70,7 @@ class ClientsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_client
-      @client = Client.where(id: params[:id], private: false).first
+      @client = Client.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
