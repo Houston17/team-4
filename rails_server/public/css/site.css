@@ -338,7 +338,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
  * ---------------------------------- */
 .topic {
     position: relative;
-    padding: 40px 0 30px;
+    padding: 0;
 }
 .topic h3 {
     margin-top: 20px;

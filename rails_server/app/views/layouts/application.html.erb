@@ -22,17 +22,15 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body style="background-color: #f1f2f6;">
-<<<<<<< HEAD
+<body style="background-color: #f1f2f6;">
   <% if !user_signed_in? %>
       <p class="sign_in"><%= link_to "Login", new_user_session_path %></p>
   <% end %>
   <% if user_signed_in? %>
     <div class="buttons">
-      <button class="button"><%= link_to('Logout', destory_user_session_path, :method => :delete) %></button>
+      <button class="button"><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></button>
     </div>
   <% end %>
-=======
   <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
     	  <div class="modal-dialog">
 				<div class="loginmodal-container">
@@ -48,8 +46,7 @@
 				  </div>
 				</div>
 			</div>
-		  </div>
->>>>>>> d00348d6dfec4a6db699bc318752c0677d0f8544
+    </div>
     <div class="docs-header">
         <!--nav-->
         <nav class="navbar navbar-default navbar-custom" role="navigation">
@@ -72,12 +69,12 @@
             </div>
         </nav>
       </div>
-<<<<<<< HEAD
-      <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
-=======
-    <p id="notice"><%= notice %></p>
->>>>>>> d00348d6dfec4a6db699bc318752c0677d0f8544
+      <% if notice then %>
+        <p class="notice"><%= notice %></p>
+      <% end %>
+       <% if alert then %>
+        <p class="alert"><%= alert %></p>
+       <% end %>
     <%= yield %>
   </body>
 </html>
