@@ -21,3 +21,5 @@ def hello():
     data = { "hello": "world" }
     db.child("test").push(data)
     return "Hello World2!"
+
+app.run()
