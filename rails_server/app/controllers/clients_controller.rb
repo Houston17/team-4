@@ -15,7 +15,7 @@ class ClientsController < ApplicationController
   # GET /clients/1.json
   def show
     @client = Client.where(id: params[:id], private: false).first
-    @events = @client.events.group_by { |e| e.date.beginning_of_month }
+    @events = @client.events.order(:date).group_by { |e| e.date.beginning_of_month }
   end
 
   # GET /clients/new
