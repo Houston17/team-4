@@ -1214,3 +1214,9 @@ p {
 .modal-dialog{
   margin-top: 70px;
 }
+
+fa-user-circle, fa-meetup, fa-road, fa-smile-o, fa-wheelchair, fa-medkit, fa-thumbs-up, fa-heart-o, fa-briefcase, fa-beer, fa-user {
+
+    margin-left: 17px;
+
+}
