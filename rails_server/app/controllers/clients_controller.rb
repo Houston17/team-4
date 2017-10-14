@@ -3,7 +3,7 @@ class ClientsController < ApplicationController
 
   # GET /clients
   # GET /clients.json
-  def index
+  def edit_list
     @clients = Client.all
   end
 
