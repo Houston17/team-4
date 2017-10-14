@@ -22,7 +22,7 @@ def hello():
     db.child("test").push(data)
     return "Hello World2!"
 
-#trying with flask
+#trying with flask************************************************
 from flask import Flask, render_template, redirect, url_for, request
 
 # route for handling the login page logic
@@ -36,10 +36,10 @@ def login():
             return redirect(url_for('home'))
     return render_template('login.html', error=error)
 
-#trying with firebase attempt 1
+#trying with firebase attempt 1*****************************
 
 from firebase import firebase
-firebase = firebase.FirebaseApplication('https://your_storage.firebaseio.com', authentication=None)
+firebase = firebase.FirebaseApplication('https://code-for-good-2017.firebaseio.com', authentication=None)
 result = firebase.get('/users', None, {'print': 'pretty'})
 print result
 {'error': 'Permission denied.'}
@@ -60,7 +60,7 @@ result = firebase.get('/users', None, {'print': 'pretty'})
 print result
 {'1': 'John Doe', '2': 'Jane Doe'}
 
-#trying with firebase attempt 2
+#trying with firebase attempt 2****************************************
 
 # Get a reference to the auth service
 auth = firebase.auth()
@@ -95,7 +95,7 @@ db.child("users").child("Morty").set(data)
 results = db.child("users").push(data, user['idToken'])
 
 
-#attempt 3
+#attempt 3********************************************************88
 user = raw_input('Create Username: ')
 password = raw_input('Create Password: ')
 
