@@ -36,12 +36,31 @@ def login():
             return redirect(url_for('home'))
     return render_template('login.html', error=error)
 
-#trying with firebase
+#trying with firebase attempt 1
 
 from firebase import firebase
-firebase = firebase.FirebaseApplication('https://code-for-good-2017.firebaseio.com', None)
-result = firebase.get('/users', None)
+firebase = firebase.FirebaseApplication('https://your_storage.firebaseio.com', authentication=None)
+result = firebase.get('/users', None, {'print': 'pretty'})
 print result
+{'error': 'Permission denied.'}
+
+authentication = firebase.Authentication('THIS_IS_MY_SECRET', 'ozgurvt@gmail.com', extra={'id': 123})
+firebase.authentication = authentication
+print authentication.extra
+{'admin': False, 'debug': False, 'email': 'ozgurvt@gmail.com', 'id': 123, 'provider': 'password'}
+
+user = authentication.get_user()
+print user.firebase_auth_token
+"eyJhbGciOiAiSFMyNTYiLCAidHlwIjogIkpXVCJ9.eyJhZG1pbiI6IGZhbHNlLCAiZGVidWciOiBmYWxzZSwgIml
+hdCI6IDEzNjE5NTAxNzQsICJkIjogeyJkZWJ1ZyI6IGZhbHNlLCAiYWRtaW4iOiBmYWxzZSwgInByb3ZpZGVyIjog
+InBhc3N3b3JkIiwgImlkIjogNSwgImVtYWlsIjogIm96Z3VydnRAZ21haWwuY29tIn0sICJ2IjogMH0.lq4IRVfvE
+GQklslOlS4uIBLSSJj88YNrloWXvisRgfQ"
+
+result = firebase.get('/users', None, {'print': 'pretty'})
+print result
+{'1': 'John Doe', '2': 'Jane Doe'}
+
+#trying with firebase attempt 2
 
 # Get a reference to the auth service
 auth = firebase.auth()
@@ -49,6 +68,7 @@ auth = firebase.auth()
 # Log the user in
 user = auth.sign_in_with_email_and_password(email, password)
 
+#***********me just trying stuff****************
 #if !email:
 #    auth.create_user_with_email_and_password(email, password)
 #    auth.send_email_verification(user['idToken'])
@@ -56,7 +76,7 @@ user = auth.sign_in_with_email_and_password(email, password)
 #    auth.send_password_reset_email("email")
 #else:
 #    auth.get_account_info(user['idToken'])
-
+#*****************************************************
 
 # before the 1 hour expiry:
 user = auth.refresh(user['refreshToken'])
