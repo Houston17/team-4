@@ -52,32 +52,24 @@
             <h3 class="panel-title">Featured Stories</h3>
          </div>
          <div class="panel-body">
-            <div class="col-sm-3">
-               <div class="profileimage" style="margin-left:-20px;margin-top:15px;"><img style="height:200px;" src="https://i.imgur.com/VKa54Wk.png">
-               </div>
-            </div>
-            <div class="col-sm-8">
-               <h3 style="margin-top:10px;"><a href="file:///C:/Users/Batu/Documents/GitHub/team-4/bootflat.github.io-master/templateIndex.html">Wendell</a></h3>
-               <h6 style="line-height:22px;color:#292929;font-size:14px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting... <a href="file:///C:/Users/Batu/Documents/GitHub/team-4/bootflat.github.io-master/templateIndex.html"> Learn More.</a></h6>
-            </div>
-            <hr>
-            <div class="col-sm-3">
-               <div class="profileimage" style="margin-left:-20px;margin-top:15px;"><img style="height:200px;" src="https://i.imgur.com/VKa54Wk.png">
-               </div>
-            </div>
-            <div class="col-sm-8">
-               <h3 style="margin-top:10px;"><a href="file:///C:/Users/Batu/Documents/GitHub/team-4/bootflat.github.io-master/templateIndex.html">Wendell</a></h3>
-               <h6 style="line-height:22px;color:#292929;font-size:14px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting... <a href="file:///C:/Users/Batu/Documents/GitHub/team-4/bootflat.github.io-master/templateIndex.html"> Learn More.</a></h6>
-            </div>
-            <hr>
-            <div class="col-sm-3">
-               <div class="profileimage" style="margin-left:-20px;margin-top:15px;"><img style="height:200px;" src="https://i.imgur.com/VKa54Wk.png">
-               </div>
-            </div>
-            <div class="col-sm-8">
-               <h3 style="margin-top:10px;"><a href="file:///C:/Users/Batu/Documents/GitHub/team-4/bootflat.github.io-master/templateIndex.html">Wendell</a></h3>
-               <h6 style="line-height:22px;color:#292929;font-size:14px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting... <a href="file:///C:/Users/Batu/Documents/GitHub/team-4/bootflat.github.io-master/templateIndex.html"> Learn More.</a></h6>
-            </div>
+            <% i = 0 %>
+            <% @featured_clients.each do |client| %>
+              <div class="col-sm-3">
+                <div class="profileimage" style="margin-left:-20px;margin-top:15px;"><img style="height:200px;" src="https://i.imgur.com/VKa54Wk.png">
+                </div>
+              </div>
+              <div class="col-sm-8">
+                <h3 style="margin-top:10px;"><%= link_to client.name, client_url(client) %></h3>
+                <h6 style="line-height:22px;color:#292929;font-size:14px;">
+                  <%= truncate(client.bio, length: 300, separator: ' ') %>
+                  <%= link_to 'Learn More', client_url(client) %>
+                </h6>
+              </div>
+              <% if i < @featured_clients.count - 1 %>
+                <hr />
+              <% end %>
+              <% i+= 1 %>
+            <% end %>
          </div>
       </div>
    </div>

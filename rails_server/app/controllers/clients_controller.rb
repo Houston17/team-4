@@ -1,6 +1,10 @@
 class ClientsController < ApplicationController
   before_action :set_client, only: [:show, :edit, :update, :destroy]
 
+  def index
+    @featured_clients = Client.where(featured: 1).limit(3)
+  end
+
   # GET /clients
   # GET /clients.json
   def edit_list
@@ -70,6 +74,6 @@ class ClientsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def client_params
-      params.require(:client).permit(:name, :bio, :intro, :embed_html)
+      params.require(:client).permit(:name, :bio, :intro, :embed_html, :featured)
     end
 end
