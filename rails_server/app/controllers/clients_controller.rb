@@ -14,8 +14,16 @@ class ClientsController < ApplicationController
   # GET /clients/1
   # GET /clients/1.json
   def show
-    # Only show a client if it isn't private
-    @client = Client.where(id: params[:id], private: false).first
+    # If the user isn't signed in, don't show private client stories
+    if !user_signed_in?
+      @client = Client.where(id: params[:id], private: false).first
+    else
+      @client = Client.find_by_id(params[:id])
+    end
+
+    if !@client 
+      raise ActionController::RoutingError.new('Client story not Found')
+    end      
 
     # Order the client's timeline events by date and group by month/year combo
     @events =  @client.events.order(:date).group_by { |e| e.date.beginning_of_month }
