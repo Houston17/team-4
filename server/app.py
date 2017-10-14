@@ -21,3 +21,20 @@ def hello():
     data = { "hello": "world" }
     db.child("test").push(data)
     return "Hello World2!"
+
+# Get a reference to the auth service
+auth = firebase.auth()
+
+# Log the user in
+user = auth.sign_in_with_email_and_password(email, password)
+
+# Get a reference to the database service
+db = firebase.database()
+
+# data to save
+data = {
+    "name": "Mortimer 'Morty' Smith"
+}
+
+# Pass the user's idToken to the push method
+results = db.child("users").push(data, user['idToken'])
