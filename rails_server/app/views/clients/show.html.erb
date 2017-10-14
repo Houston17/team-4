@@ -10,12 +10,7 @@
           <div class="col-sm-8">
               <h3 style=""><%= @client.name %></h3>
               <h5 style="margin-bottom:20px;">Former/Current Client</h5>
-              <h6 style="line-height:22px;color:#292929;font-size:14px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                  industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
-                  type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                  but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised
-                  in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-                  with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h6>
+              <h6 style="line-height:22px;color:#292929;font-size:14px;"><%= @client.bio %></h6>
 
               <h6 style="text-align: left; font-weight: 600; line-height: 22px; color: #292929; font-size: 15px;"> Share his story: </h6>
               <!-- AddToAny BEGIN -->
@@ -43,23 +38,25 @@
 
                 <div class="row">
                     <div class="col-md-12">
-                        <h5 class="center">Wendell lived without a home for 25 years. Then, he met Search. Here is how we helped him.</h5>
+                        <h5 class="center"><%= @client.intro %></h5>
                         <div class="timeline">
                             <dl>
+                                <% i = 0 %>
                                 <% @events.each do |event_month_group| %>
                                   <% month = event_month_group[0] %>
                                   <% events = event_month_group[1] %>
                                   <dt><%= month.strftime("%b %Y") %></dt>
 
+
                                   <% events.each do |event| %>
-                                    <dd class="pos-right clearfix">
+                                    <dd class="<%= if i % 2 == 0 then "pos-left" else "pos-right" end %> clearfix">
                                       <div class="circ">
-                                          <i class="fa fa-handshake-o" aria-hidden="true"></i>
+                                          <i class="fa <%= event.icon %>" aria-hidden="true"></i>
                                       </div>
                                       <div class="time"><%= event.date.strftime("%b %d") %></div>
                                       <div class="events">
                                           <div class="pull-left">
-                                              <img class="events-object img-rounded" src="img/photo-1.jpg">
+                                              <img class="events-object img-rounded" src="/img/photo-1.jpg">
                                           </div>
                                           <div class="events-body">
                                               <h4 class="events-heading"><%= event.title %></h4>
@@ -67,73 +64,15 @@
                                           </div>
                                       </div>
                                     </dd>
+                                    <% i+=1 %>
                                   <% end %>
                                 <% end %>
-                                
-                                <dd class="pos-left clearfix">
-                                    <div class="circ">
-                                        <i class="fa fa-home" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="time">Mar 20</div>
-                                    <div class="events">
-                                        <div class="pull-left">
-                                            <img class="events-object img-rounded" src="img/photo-2.jpg">
-                                        </div>
-                                        <div class="events-body">
-                                            <h4 class="events-heading">Applied for Housing Voucher</h4>
-                                            <p>The housing choice voucher program is the federal government's major program
-                                                for assisting very low-income families, the elderly, and the disabled to
-                                                afford decent, safe, and sanitary housing in the private market. We helped
-                                                Wendall apply for and fill out the application needed to qualify for and
-                                                eventually get a housing voucher.</p>
-                                        </div>
-                                    </div>
-                                </dd>
-                                <dt>April 2014</dt>
-                                <dd class="pos-right clearfix">
-                                    <div class="circ">
-                                        <i class="fa fa-users" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="time">Apr 15</div>
-                                    <div class="events">
-                                        <div class="pull-left">
-                                            <img class="events-object img-rounded" src="img/photo-3.jpg">
-                                        </div>
-                                        <div class="events-body">
-                                            <h4 class="events-heading">Meeting with Case Worker</h4>
-                                            <p>Wendell met with his case worker. He relayed information regarding his search
-                                                for an apartment with us. Because of his criminal history, it is difficult
-                                                for him to find a renter willing to rent to him. However, we are still ongoing
-                                                and looking for a place for him.</p>
-                                        </div>
-                                    </div>
-                                </dd>
-                                <dd class="pos-left clearfix">
-                                    <div class="circ">
-                                        <i class="fa fa-check" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="time">Apr 20</div>
-                                    <div class="events">
-                                        <div class="pull-left">
-                                            <img class="events-object img-rounded" src="img/photo-4.jpg">
-                                        </div>
-                                        <div class="events-body">
-                                            <h4 class="events-heading">Found an Apartment!</h4>
-                                            <p>After weeks of looking, Wendell found an apartment that would accept his criminal
-                                                history. His journey with Search may have come to an end, but he is committed
-                                                to becoming involved again and helping those who were in his shoes before.</p>
-                                        </div>
-                                    </div>
-                                </dd>
-
-                            </dl>
                         </div>
                     </div>
                 </div>
                 <hr>
                 <p align="center">
-                    <iframe align="middle" src="https://player.vimeo.com/video/211739160" width="640" height="360" frameborder="0" webkitallowfullscreen
-                        mozallowfullscreen allowfullscreen></iframe>
+                    <%= @client.embed_html.html_safe %>
                 </p>
             </div>
         </div>
