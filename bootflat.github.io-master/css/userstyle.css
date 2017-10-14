@@ -927,13 +927,18 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	width:74%;
 }
 .profileimage img{
-	border: 1px solid rgba(0, 0, 0, 0.5);
+
   height: 380px;
   width: 260px;
+  padding-bottom: 50px;
 }
 
-.example {
-  
+.c {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: left;
+  height: 40px;
+  width: 25px;
 }
 
 
