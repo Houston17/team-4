@@ -5,20 +5,12 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version: ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-linux]
 
-* System dependencies
+* System dependencies: `bundle install`
 
-* Configuration
+* Database creation: `rails db:create`
 
-* Database creation
+* Database initialization: `rails db:migrate`
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* How to run the test suite: lol what tests

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171014095838) do
+ActiveRecord::Schema.define(version: 20171014145654) do
 
   create_table "clients", force: :cascade do |t|
     t.string "name"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20171014095838) do
     t.string "title"
     t.datetime "date"
     t.string "icon"
+    t.string "picture_url"
     t.index ["client_id"], name: "index_events_on_client_id"
   end
 

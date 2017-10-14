@@ -54,7 +54,7 @@
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a class="nav-link current" href="index.html">Home</a></li>
+                        <li><a class="nav-link current" href="<%= root_url %>">Home</a></li>
 
                         <% if user_signed_in? %>
                           <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
@@ -72,6 +72,8 @@
        <% if alert then %>
         <p class="alert"><%= alert %></p>
        <% end %>
-    <%= yield %>
+    <div class="container"><br />
+      <%= yield %>
+    </div>
   </body>
 </html>
