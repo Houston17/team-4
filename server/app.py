@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template, request
 
 import pyrebase
 
@@ -21,5 +21,22 @@ def hello():
     data = { "hello": "world" }
     db.child("test").push(data)
     return "Hello World2!"
+
+db = firebase.database()
+@app.route('/other',methods = ['POST', 'GET'])
+def other():
+    if request.methods == 'GET':
+        getinfo()
+
+def getinfo(name):
+    clients = db.child("test");
+    for key in clients:
+        if key.get("name") == name:
+            events = key.get("events")
+            for temp in events:
+                pictures = temp.get("pictures")
+                des = temp.get("description")
+                #send these pictures & description back
+
 
 app.run()
