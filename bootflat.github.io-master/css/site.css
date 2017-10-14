@@ -378,7 +378,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
     box-shadow: 0 1px 1px rgba(0,0,0,0.05);
 }
-.topic .container a {
+/*.topic .container a {
     color: #fff;
     filter:alpha(opacity=100);
     opacity: 1;
@@ -386,7 +386,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     padding: 0;
     font-weight: normal;
 	    margin-right: 15px;
-}
+}*/
 .topic .container a.btn {
     padding: 10px 16px;
     text-decoration: none;
@@ -1060,4 +1060,57 @@ p {
     transform: scale(1.05);
 	
 	
+}
+.main .container {
+	padding-left: 0px;
+    padding-right: 0px;
+	
+}
+.topic .container a {
+	margin-right: 0px;
+}
+.main hr {
+    DISPLAY: inline-block;
+    width: 100%;
+    margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+
+.carousel-caption {
+    right: 20%;
+    left: 20%;
+    padding-bottom: 20px;
+}
+}
+.carousel-caption h3{
+	color:white;
+	font-size:45px;
+	margin-bottom:5px;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.carousel-caption p{
+	font-size:20px;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.carousel-caption a{
+	color: #dceaef;
+	transition: color 0.5s ease;
+}
+.carousel-caption a:hover{
+	color: #3bafda;
+}
+
+.carousel-caption h3 {
+
+    margin-top: -8px;
+}
+@media screen and (min-width: 768px){
+.carousel-caption {
+
+    border-radius: 35px;
+
+    background-color: rgba(0, 0, 0, 0.47);
+}
 }
