@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, url_for
 
 import pyrebase
 
@@ -23,11 +23,17 @@ def hello():
     return "Hello World2!"
 
 <<<<<<< HEAD
+
+firebase.auth().createUserWithEmailAndPassword(email, password)
+firebase.auth().signInWithEmailAndPassword(email, password)
+firebase.auth().signOut().then(function())
+
+#-------------------------------------------------------------------------------
 #trying with flask************************************************
 from flask import Flask, render_template, redirect, url_for, request
 
 # route for handling the login page logic
-@app.route('/login', methods=['GET', 'POST'])
+@app.route('/login/<username>', methods=['POST'])
 def login():
     error = None
     if request.method == 'POST':
@@ -124,20 +130,22 @@ while True:
         key = raw_input("")
 =======
 db = firebase.database()
-@app.route('/other',methods = ['POST', 'GET'])
+@app.route('/other/',methods = ['POST', 'GET'])
 def other():
-    if request.methods == 'GET':
+    if request.method == 'GET':
         getinfo()
 
-def getinfo(name):
-    clients = db.child("test");
-    for key in clients:
-        if key.get("name") == name:
-            events = key.get("events")
+def getinfo():
+    clients = db.child("test").get();
+    for some in clients.each():
+        if some.name == "Chris":
+            events = key["events"]
             for temp in events:
                 pictures = temp.get("pictures")
                 des = temp.get("description")
-                #send these pictures & description back
+                return {picture_urls: pictures, description: des}
+
+            #result.picture_urls[0].
 
 
 app.run()
