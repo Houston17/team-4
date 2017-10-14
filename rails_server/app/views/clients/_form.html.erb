@@ -16,6 +16,16 @@
     <%= form.text_field :name, id: :client_name %>
   </div>
 
+  <div class="field">
+    <%= form.label :bio %>
+    <%= form.text_area :bio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :intro %>
+    <%= form.text_area :intro %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
