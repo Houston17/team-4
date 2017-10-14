@@ -22,6 +22,14 @@
   </head>
 
   <body style="background-color: #f1f2f6;">
+  <% if !user_signed_in? %>
+      <p class="sign_in"><%= link_to "Login", new_user_session_path %></p>
+  <% end %>
+  <% if user_signed_in? %>
+    <div class="buttons">
+      <button class="button"><%= link_to('Logout', destory_user_session_path, :method => :delete) %></button>
+    </div>
+  <% end %>
     <div class="docs-header">
         <!--nav-->
         <nav class="navbar navbar-default navbar-custom" role="navigation">
@@ -44,7 +52,8 @@
             </div>
         </nav>
       </div>
-      
+      <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
