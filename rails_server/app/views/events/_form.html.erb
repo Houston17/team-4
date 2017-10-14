@@ -12,13 +12,28 @@
   <% end %>
 
   <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :icon %>
+    <%= form.text_field :icon %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.text_field :date, type: 'date' %>
+  </div>
+
+  <div class="field">
     <%= form.label :description %>
-    <%= form.text_field :description, id: :event_description %>
+    <%= form.text_area :description, id: :event_description %>
   </div>
 
   <div class="field">
     <%= form.label :client_id %>
-    <%= form.text_field :client_id, id: :event_client_id %>
+    <%= form.collection_select :client_id, Client.all, :id, :name %>
   </div>
 
   <div class="actions">
