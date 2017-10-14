@@ -36,6 +36,16 @@
     <%= form.check_box :featured, class: 'form-control' %>
   </div>
 
+  <div class="field">
+    <%= form.label :private %>
+    <%= form.check_box :private, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :picture_url %>
+    <%= form.text_field :picture_url, class: 'form-control' %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
